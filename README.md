@@ -12,7 +12,7 @@
 - 代码规范：EditorConfig + Prettier + ESLint + Airbnb JavaScript Style Guide
 - 提交规范：Commitizen + Commitlint
 - 单元测试：vue-test-utils + jest + vue-jest + ts-jest
-- 自动部署：GitHub Actions
+- 自动部署：Gitee Actions
 
 \*\*\* 目录结构
 
