@@ -3,7 +3,7 @@ name: docs
 on:
   # 每当 push 到 main 分支时触发部署
   push:
-    branches: [main]
+    branches: [master]
   # 手动触发部署
   workflow_dispatch:
 
@@ -21,13 +21,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           # 选择要使用的 node 版本
-          node-version: 16
+          node-version: 18
           # 缓存 yarn 依赖
           cache: yarn
       - run: yarn install
 
       # 运行构建脚本
-      - name: Build VuePress site
+      - name: Build
         run: yarn run build
 
       # 查看 workflow 的文档来获取更多信息
@@ -37,7 +37,6 @@ jobs:
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
           build_dir: dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
