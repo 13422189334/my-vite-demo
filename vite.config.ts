@@ -11,7 +11,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录
     }
   },
-  base: './', // 设置打包路径
+  base: '/my-vite-demo/', // 设置打包路径
   server: {
     port: 4000, // 设置服务启动端口号
     open: true, // 设置服务启动时是否自动打开浏览器
